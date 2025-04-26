@@ -1,13 +1,18 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -17,10 +22,10 @@
                 All Plumbing
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="AllPlumbing-link">
-                <a href="" class="dropdown-item">Pipe &amp; Tubing</a>
-                <a href="" class="dropdown-item">Fittings</a>
-                <a href="" class="dropdown-item">Valves</a>
-                <a href="" class="dropdown-item">All Plumbing</a>
+                <a href="{% url 'products' %}?category=pipe_tubing,pipe,tubing" class="dropdown-item">Pipe &amp; Tubing</a>
+                <a href="{% url 'products' %}?category=fittings" class="dropdown-item">Fittings</a>
+                <a href="{% url 'products' %}?category=valves" class="dropdown-item">Valves</a>
+                <a href="{% url 'products' %}?category=pipe,tubing,fittings,valves" class="dropdown-item">All Plumbing</a>
             </div>
         </li>
 
@@ -29,11 +34,11 @@
                 All Bathroom
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Bathroom Faucets</a>
-                <a href="" class="dropdown-item">Toilets</a>
-                <a href="" class="dropdown-item">Bathroom Sinks</a>
-                <a href="" class="dropdown-item">Showers &amp; Bathtubs</a>
-                <a href="" class="dropdown-item">All Bathroom</a>
+                <a href="{% url 'products' %}?category=bathroom_faucets,bathroom faucets" class="dropdown-item">Bathroom Faucets</a>
+                <a href="{% url 'products' %}?category=toilets" class="dropdown-item">Toilets</a>
+                <a href="{% url 'products' %}?category=bathroom_sinks,sinks" class="dropdown-item">Bathroom Sinks</a>
+                <a href="{% url 'products' %}?category=showers_bathtubs,showers,bathtubs" class="dropdown-item">Showers &amp; Bathtubs</a>
+                <a href="{% url 'products' %}?category=bathroom_facucets,facucets,toilets,bathroom_sinks,sinks,showers_bathtubs,showers,bathtubs" class="dropdown-item">All Bathroom</a>
             </div>
         </li>
 
@@ -42,23 +47,24 @@
                 All Electrical
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="AllElectrical-link">
-                <a href="" class="dropdown-item">Wire &amp; Cable</a>
-                <a href="" class="dropdown-item">Breakers</a>
-                <a href="" class="dropdown-item">Components</a>
-                <a href="" class="dropdown-item">Connectors</a>
-                <a href="" class="dropdown-item">All Electrical</a>
+                <a href="{% url 'products' %}?category=wire_cable,wire,cable" class="dropdown-item">Wire &amp; Cable</a>
+                <a href="{% url 'products' %}?category=breakers" class="dropdown-item">Breakers</a>
+                <a href="{% url 'products' %}?category=components" class="dropdown-item">Components</a>
+                <a href="{% url 'products' %}?category=connectors" class="dropdown-item">Connectors</a>
+                <a href="{% url 'products' %}?category=wire_cable,wire,cable,breakers,components,connectors" class="dropdown-item">All Electrical</a>
             </div>
         </li>
+
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
