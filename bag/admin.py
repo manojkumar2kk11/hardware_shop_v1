@@ -1,3 +1,9 @@
-from django.contrib import admin
+from django import template
 
-# Register your models here.
+
+register = template.Library()
+
+
+@register.filter(name='calc_subtotal')
+def calc_subtotal(price, quantity):
+    return price * quantity
