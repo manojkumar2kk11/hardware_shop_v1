@@ -1,0 +1,786 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00001",
+            "name": "Smart LED Bulb",
+            "description": "This is a sample description for Smart LED Bulb.",
+            "price": 12.5,
+            "category": 1,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "na_10001.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00002",
+            "name": "Wireless Charger",
+            "description": "This is a sample description for Wireless Charger.",
+            "price": 15.0,
+            "category": 1,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "na_10002.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00003",
+            "name": "Bluetooth Speaker",
+            "description": "This is a sample description for Bluetooth Speaker.",
+            "price": 17.5,
+            "category": 1,
+            "rating": 4.1,
+            "image_url": "na_10003.jpg",
+            "image": ""
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00004",
+            "name": "Portable Projector",
+            "description": "This is a sample description for Portable Projector.",
+            "price": 20.0,
+            "category": 1,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "na_10004.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00005",
+            "name": "Discounted Power Drill",
+            "description": "This is a sample description for Discounted Power Drill.",
+            "price": 22.5,
+            "category": 2,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "d_10001.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00006",
+            "name": "Budget Smartphone",
+            "description": "This is a sample description for Budget Smartphone.",
+            "price": 25.0,
+            "category": 2,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "d_10002.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00007",
+            "name": "Sale Kitchen Mixer",
+            "description": "This is a sample description for Sale Kitchen Mixer.",
+            "price": 27.5,
+            "category": 2,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "d_10003.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00008",
+            "name": "Winter Jacket Sale",
+            "description": "This is a sample description for Winter Jacket Sale.",
+            "price": 30.0,
+            "category": 2,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "d_10004.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00009",
+            "name": "Last Season Shoes",
+            "description": "This is a sample description for Last Season Shoes.",
+            "price": 32.5,
+            "category": 3,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "cl_10001.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00010",
+            "name": "Old Model TV",
+            "description": "This is a sample description for Old Model TV.",
+            "price": 35.0,
+            "category": 3,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "cl_10002.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00011",
+            "name": "Clearance Headphones",
+            "description": "This is a sample description for Clearance Headphones.",
+            "price": 37.5,
+            "category": 3,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "cl_10003.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00012",
+            "name": "End-of-Line Coffee Maker",
+            "description": "This is a sample description for End-of-Line Coffee Maker.",
+            "price": 40.0,
+            "category": 3,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "cl_10004.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00013",
+            "name": "HDMI Connector",
+            "description": "This is a sample description for HDMI Connector.",
+            "price": 42.5,
+            "category": 4,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "ec_10001.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00014",
+            "name": "USB-C Adapter",
+            "description": "This is a sample description for USB-C Adapter.",
+            "price": 45.0,
+            "category": 4,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "ec_10002.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00015",
+            "name": "Ethernet Coupler",
+            "description": "This is a sample description for Ethernet Coupler.",
+            "price": 47.5,
+            "category": 4,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "ec_10003.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00016",
+            "name": "Audio Jack Splitter",
+            "description": "This is a sample description for Audio Jack Splitter.",
+            "price": 50.0,
+            "category": 4,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "ec_10004.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00017",
+            "name": "Resistor Pack",
+            "description": "This is a sample description for Resistor Pack.",
+            "price": 52.5,
+            "category": 5,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "c_10001.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00018",
+            "name": "Capacitor Set",
+            "description": "This is a sample description for Capacitor Set.",
+            "price": 55.0,
+            "category": 5,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "c_10002.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00019",
+            "name": "Transistor Kit",
+            "description": "This is a sample description for Transistor Kit.",
+            "price": 57.5,
+            "category": 5,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "c_10003.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00020",
+            "name": "IC Chips Assortment",
+            "description": "This is a sample description for IC Chips Assortment.",
+            "price": 60.0,
+            "category": 5,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "c_10004.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00021",
+            "name": "Single Pole Breaker",
+            "description": "This is a sample description for Single Pole Breaker.",
+            "price": 62.5,
+            "category": 6,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "b_10001.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00022",
+            "name": "Double Pole Breaker",
+            "description": "This is a sample description for Double Pole Breaker.",
+            "price": 65.0,
+            "category": 6,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "b_10002.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00023",
+            "name": "Mini Circuit Breaker",
+            "description": "This is a sample description for Mini Circuit Breaker.",
+            "price": 67.5,
+            "category": 6,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "b_10003.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00024",
+            "name": "Residual Current Breaker",
+            "description": "This is a sample description for Residual Current Breaker.",
+            "price": 70.0,
+            "category": 6,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "b_10004.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00025",
+            "name": "Copper Wire Roll",
+            "description": "This is a sample description for Copper Wire Roll.",
+            "price": 72.5,
+            "category": 7,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "wc_10001.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00026",
+            "name": "Fiber Optic Cable",
+            "description": "This is a sample description for Fiber Optic Cable.",
+            "price": 75.0,
+            "category": 7,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "wc_10002.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00027",
+            "name": "Coaxial Cable",
+            "description": "This is a sample description for Coaxial Cable.",
+            "price": 77.5,
+            "category": 7,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "wc_10003.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00028",
+            "name": "Speaker Wire Spool",
+            "description": "This is a sample description for Speaker Wire Spool.",
+            "price": 80.0,
+            "category": 7,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "wc_10004.jpg"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00029",
+            "name": "Chrome Bathroom Faucet",
+            "description": "This is a sample description for Chrome Bathroom Faucet.",
+            "price": 82.5,
+            "category": 8,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "bf_10001.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00030",
+            "name": "Matte Black Faucet",
+            "description": "This is a sample description for Matte Black Faucet.",
+            "price": 85.0,
+            "category": 8,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "bf_10002.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00031",
+            "name": "Vintage Style Faucet",
+            "description": "This is a sample description for Vintage Style Faucet.",
+            "price": 87.5,
+            "category": 8,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "bf_10003.jpg"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00032",
+            "name": "Wall-Mount Faucet",
+            "description": "This is a sample description for Wall-Mount Faucet.",
+            "price": 90.0,
+            "category": 8,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "bf_10004.jpg"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00033",
+            "name": "Dual Flush Toilet",
+            "description": "This is a sample description for Dual Flush Toilet.",
+            "price": 92.5,
+            "category": 9,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "t_10001.jpg"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00034",
+            "name": "Compact Toilet",
+            "description": "This is a sample description for Compact Toilet.",
+            "price": 95.0,
+            "category": 9,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "t_10002.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00035",
+            "name": "Smart Bidet Toilet",
+            "description": "This is a sample description for Smart Bidet Toilet.",
+            "price": 97.5,
+            "category": 9,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "t_10003.jpg"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00036",
+            "name": "Wall-Hung Toilet",
+            "description": "This is a sample description for Wall-Hung Toilet.",
+            "price": 100.0,
+            "category": 9,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "t_10004.jpg"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00037",
+            "name": "Pedestal Sink",
+            "description": "This is a sample description for Pedestal Sink.",
+            "price": 102.5,
+            "category": 10,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "bs_10001.jpg"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00038",
+            "name": "Wall-Mounted Sink",
+            "description": "This is a sample description for Wall-Mounted Sink.",
+            "price": 105.0,
+            "category": 10,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "bs_10002.jpg"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00039",
+            "name": "Under-Mount Sink",
+            "description": "This is a sample description for Under-Mount Sink.",
+            "price": 107.5,
+            "category": 10,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "bs_10003.jpg"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00040",
+            "name": "Vessel Sink",
+            "description": "This is a sample description for Vessel Sink.",
+            "price": 110.0,
+            "category": 10,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "bs_10004.jpg"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00041",
+            "name": "Walk-In Shower",
+            "description": "This is a sample description for Walk-In Shower.",
+            "price": 112.5,
+            "category": 11,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "sb_10001.jpg"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00042",
+            "name": "Clawfoot Bathtub",
+            "description": "This is a sample description for Clawfoot Bathtub.",
+            "price": 115.0,
+            "category": 11,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "sb_10002.jpg"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00043",
+            "name": "Corner Tub",
+            "description": "This is a sample description for Corner Tub.",
+            "price": 117.5,
+            "category": 11,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "sb_10003.jpg"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00044",
+            "name": "Rainfall Shower Set",
+            "description": "This is a sample description for Rainfall Shower Set.",
+            "price": 120.0,
+            "category": 11,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "sb_10004.jpg"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00045",
+            "name": "PVC Pipe",
+            "description": "This is a sample description for PVC Pipe.",
+            "price": 122.5,
+            "category": 12,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "pt_10001.jpg"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00046",
+            "name": "Copper Tubing",
+            "description": "This is a sample description for Copper Tubing.",
+            "price": 125.0,
+            "category": 12,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "pt_10002.jpg"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00047",
+            "name": "PEX Tubing",
+            "description": "This is a sample description for PEX Tubing.",
+            "price": 127.5,
+            "category": 12,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "pt_10003.jpg"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00048",
+            "name": "Steel Pipe",
+            "description": "This is a sample description for Steel Pipe.",
+            "price": 130.0,
+            "category": 12,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "pt_10004.jpg"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00049",
+            "name": "Elbow Fitting",
+            "description": "This is a sample description for Elbow Fitting.",
+            "price": 132.5,
+            "category": 13,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "f_10001.jpg"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00050",
+            "name": "Tee Fitting",
+            "description": "This is a sample description for Tee Fitting.",
+            "price": 135.0,
+            "category": 13,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "f_10002.jpg"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00051",
+            "name": "Reducer Fitting",
+            "description": "This is a sample description for Reducer Fitting.",
+            "price": 137.5,
+            "category": 13,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "f_10003.jpg"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00052",
+            "name": "Coupling Fitting",
+            "description": "This is a sample description for Coupling Fitting.",
+            "price": 140.0,
+            "category": 13,
+            "rating": 3.9,
+            "image_url": "",
+            "image": "f_10004.jpg"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00053",
+            "name": "Ball Valve",
+            "description": "This is a sample description for Ball Valve.",
+            "price": 142.5,
+            "category": 14,
+            "rating": 4.1,
+            "image_url": "",
+            "image": "v_10001.jpg"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00054",
+            "name": "Gate Valve",
+            "description": "This is a sample description for Gate Valve.",
+            "price": 145.0,
+            "category": 14,
+            "rating": 4.3,
+            "image_url": "",
+            "image": "v_10002.jpg"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00055",
+            "name": "Check Valve",
+            "description": "This is a sample description for Check Valve.",
+            "price": 147.5,
+            "category": 14,
+            "rating": 3.5,
+            "image_url": "",
+            "image": "v_10003.jpg"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "products.product",
+        "fields": {
+            "sku": "sku00056",
+            "name": "Globe Valve",
+            "description": "This is a sample description for Globe Valve.",
+            "price": 150.0,
+            "category": 14,
+            "rating": 3.7,
+            "image_url": "",
+            "image": "v_10004.jpg"
+        }
+    }
+]
