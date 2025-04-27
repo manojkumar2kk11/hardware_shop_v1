@@ -28,7 +28,10 @@ SECRET_KEY = 'django-insecure-#+qwt^4o_+h$*!573$b_x!37-46iusz@@z@hzg#qr2r7q2s#v1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1', # local host
+    'localhost', # listen for stripe webhooks
+]
 
 
 # Application definition
