@@ -32,7 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1', # local host
     'localhost', # listen for stripe webhooks
-    'https://fh-building-supplies-4710f10b810d.herokuapp.com/',
+    'fh-building-supplies-4710f10b810d.herokuapp.com/',
 ]
 
 
