@@ -30,8 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', # local host
-    'localhost', # listen for stripe webhooks
+    '127.0.0.1',  # local host
+    'localhost',  # listen for stripe webhooks
     'fh-building-supplies-4710f10b810d.herokuapp.com',
 ]
 
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'home', 
+    'home',
     'products',
     'bag',
     'checkout',
@@ -131,7 +131,7 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-else: 
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
