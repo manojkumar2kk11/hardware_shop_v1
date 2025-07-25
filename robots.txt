@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://fh-building-supplies-4710f10b810d.herokuapp.com/sitemap.xml
