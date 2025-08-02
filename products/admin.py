@@ -11,9 +11,15 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'rating',
         'image',
+        'display_tags',
     )
 
     ordering = ('sku',)
+    filter_horizontal = ('tags',)  # adds the multi-select widget for tags
+
+    def display_tags(self, obj):
+        return ", ".join(tag.name for tag in obj.tags.all())
+    display_tags.short_description = 'Tags'
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
@@ -23,3 +29,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Tag)
