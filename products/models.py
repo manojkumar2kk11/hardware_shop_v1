@@ -26,6 +26,19 @@ class Product(models.Model):
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    tags = models.ManyToManyField('Tag', blank=True)
+    discount_percent = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return self.name
+    
+    @property
+    def sale_price(self):  
+        return round(self.price * (1 - self.discount_percent / 100), 2)
+    
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50, unique=True)
 
     def __str__(self):
         return self.name

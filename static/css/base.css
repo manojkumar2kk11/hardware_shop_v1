@@ -327,3 +327,20 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
+
+/* Product tags styling */
+.product-tags {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.product-tags span {
+    display: inline-block;
+    background-color: #007bff;  /* Bootstrap primary blue */
+    color: white;
+    padding: 0.25em 0.6em;
+    margin-right: 0.3em;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
