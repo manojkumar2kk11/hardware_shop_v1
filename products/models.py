@@ -1,4 +1,5 @@
 from django.db import models
+from decimal import Decimal
 
 
 class Category(models.Model):
@@ -33,8 +34,9 @@ class Product(models.Model):
         return self.name
     
     @property
-    def sale_price(self):  
-        return round(self.price * (1 - self.discount_percent / 100), 2)
+    def sale_price(self):
+        discount_factor = Decimal(1) - (Decimal(self.discount_percent) / Decimal(100))
+        return (self.price * discount_factor).quantize(Decimal('0.01'))
     
 
 class Tag(models.Model):
