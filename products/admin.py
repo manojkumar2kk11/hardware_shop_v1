@@ -10,6 +10,9 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'price',
         'rating',
+        'brand',
+        'warranty_months',
+        'condition',
         'image',
     )
 
