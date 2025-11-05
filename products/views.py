@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -11,9 +12,14 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all products, including sorting and search queries
 
-    products = Product.objects.all()
+    Uses select_related to avoid extra queries for the product->category relation
+    and simple pagination to limit the number of items rendered per page.
+    """
+
+    # select_related on category reduces N+1 queries when templates access product.category
+    products_qs = Product.objects.select_related('category').all()
     query = None
     categories = None
     sort = None
@@ -32,11 +38,11 @@ def all_products(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+            products_qs = products_qs.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories)
+            products_qs = products_qs.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
@@ -47,12 +53,26 @@ def all_products(request):
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+            products_qs = products_qs.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
+    # count before pagination so we can show total results on the template
+    products_count = products_qs.count()
+
+    # simple pagination
+    paginator = Paginator(products_qs, 24)  # 24 products per page
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+
     context = {
         'products': products,
+        'products_count': products_count,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -62,9 +82,12 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """ A view to show individual product details
 
-    product = get_object_or_404(Product, pk=product_id)
+    Use select_related so accessing product.category in the template does not hit the DB again.
+    """
+
+    product = get_object_or_404(Product.objects.select_related('category'), pk=product_id)
 
     context = {
         'product': product,
