@@ -1,32 +1,18 @@
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .forms import NewsletterForm
+from django.shortcuts import render
+
+# Create your views here.
 
 def index(request):
-    """ A view to return the index page and handle newsletter form """
-    form = NewsletterForm()
-
-    if request.method == 'POST':
-        form = NewsletterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Subscribed successfully!')
-            return redirect('home')
-
-    context = {'form': form}
-    return render(request, 'home/index.html', context)
+    """ A view to return the index page """
+    
+    return render(request, 'home/index.html')
 
 
-def subscribe(request):
-    """ If you want to have a dedicated subscribe page """
-    form = NewsletterForm()
+def faq(request):
+    """ Frequently Asked Questions page """
+    return render(request, 'home/faq.html')
 
-    if request.method == 'POST':
-        form = NewsletterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Subscribed successfully!')
-            return redirect('home')
 
-    context = {'form': form}
-    return render(request, 'home/subscribe.html', context)
+def contact(request):
+    """ Contact Us page """
+    return render(request, 'home/contact.html')

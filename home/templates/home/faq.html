@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} | FAQ{% endblock %}
+
+{% block extra_css %}
+<style>
+  /* Remove global background image only on this page and use a flat background */
+  body { background: #f8f9fa !important; background-image: none !important; }
+  .content-contrast { background-color: #ffffff; color: #495057; border-radius: .25rem; }
+  .content-contrast a { color: #0056b3; text-decoration: underline; }
+  .header-contrast { color: #343a40; }
+</style>
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center mt-4">
+      <h2 class="logo-font header-contrast">Frequently Asked Questions</h2>
+    </div>
+  </div>
+  <hr>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mb-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8 content-contrast p-4 shadow-sm">
+      <div class="mb-4">
+        <h5>How do I place an order?</h5>
+        <p>Browse products, add items to your bag, and complete checkout with secure payment via Stripe.</p>
+      </div>
+      <div class="mb-4">
+        <h5>What payment methods are accepted?</h5>
+        <p>We accept major debit/credit cards through Stripe checkout.</p>
+      </div>
+      <div class="mb-4">
+        <h5>Can I track my order?</h5>
+        <p>Yes, you can review your orders from <a href="{% url 'profile' %}">My Profile</a> once logged in.</p>
+      </div>
+      <div class="mb-4">
+        <h5>How are shipping costs calculated?</h5>
+        <p>Standard delivery is {{ STANDARD_DELIVERY_PERCENTAGE }}% of the order. Orders over ${{ FREE_DELIVERY_THRESHOLD }} qualify for free delivery.</p>
+      </div>
+      <div class="mb-4">
+        <h5>What is your returns policy?</h5>
+        <p>Please contact our support team within 14 days of delivery to arrange returns.</p>
+      </div>
+      <div class="mb-4">
+        <h5>Need more help?</h5>
+        <p>Visit our <a href="{% url 'contact' %}">Contact Us</a> page and we’ll get back to you.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <a href="{% url 'home' %}" class="btn btn-outline-dark rounded-0">Back to Home</a>
+    </div>
+  </div>
+  <br>
+</div>
+{% endblock %}
+
+

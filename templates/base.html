@@ -41,7 +41,7 @@
   {% block extra_js %}
   {% endblock %}
 
-  <title>FB Building Supplies{% block extra_title %}{% endblock %}</title>
+  <title>FH Building Supplies{% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -70,6 +70,11 @@
       </div>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <li class="list-inline-item mr-3 align-middle d-none d-lg-inline">
+            <a href="{% url 'faq' %}" class="small text-secondary">FAQ</a>
+            <span class="text-muted small mx-1">|</span>
+            <a href="{% url 'contact' %}" class="small text-secondary">Contact Us</a>
+          </li>
           <li class="list-inline-item dropdown">
             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -148,7 +153,6 @@
 
   {% block content %}
   {% endblock %}
-
 
   {% block postloadjs %}
 

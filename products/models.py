@@ -1,5 +1,4 @@
 from django.db import models
-from decimal import Decimal
 
 
 class Category(models.Model):
@@ -27,20 +26,17 @@ class Product(models.Model):
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    tags = models.ManyToManyField('Tag', blank=True)
-    discount_percent = models.PositiveIntegerField(default=0)
 
-    def __str__(self):
-        return self.name
-    
-    @property
-    def sale_price(self):
-        discount_factor = Decimal(1) - (Decimal(self.discount_percent) / Decimal(100))
-        return (self.price * discount_factor).quantize(Decimal('0.01'))
-    
+    # additional product options
+    brand = models.CharField(max_length=254, null=True, blank=True)
+    warranty_months = models.PositiveIntegerField(null=True, blank=True)
 
-class Tag(models.Model):
-    name = models.CharField(max_length=50, unique=True)
+    CONDITION_CHOICES = [
+        ('new', 'New'),
+        ('used', 'Used'),
+        ('refurbished', 'Refurbished'),
+    ]
+    condition = models.CharField(max_length=20, choices=CONDITION_CHOICES, default='new')
 
     def __str__(self):
         return self.name
