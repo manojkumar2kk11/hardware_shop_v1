@@ -20,6 +20,19 @@
         </form>
     </div>
 </li>
+<li class="list-inline-item dropdown d-block d-lg-none">
+    <a class="text-black nav-link" href="#" id="mobile-more" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="text-center">
+            <div><i class="fas fa-ellipsis-h fa-lg"></i></div>
+            <p class="my-0">More</p>
+        </div>
+    </a>
+    <div class="dropdown-menu border-0" aria-labelledby="mobile-more">
+        <a href="{% url 'faq' %}" class="dropdown-item small">FAQ</a>
+        <a href="{% url 'contact' %}" class="dropdown-item small">Contact Us</a>
+        <a href="{% url 'newsletter:signup' %}" class="dropdown-item small">Newsletter</a>
+    </div>
+</li>
 <li class="list-inline-item dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
